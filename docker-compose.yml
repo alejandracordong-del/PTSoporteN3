@@ -1,4 +1,4 @@
-version: '1'
+version: '3.8'  # <-- CAMBIADO: Actualizado a una versión moderna y válida de Compose
 
 services:
   database:
@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password123
       POSTGRES_DB: main_db
-      # === ¡AQUÍ INICIA EL PLUS PARA LA DB! ===
+    # === ¡AQUÍ INICIA EL PLUS PARA LA DB! ===
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U admin -d main_db"]
       interval: 5s
